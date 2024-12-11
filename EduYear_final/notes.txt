@@ -1,0 +1,2 @@
+# convert speach to text 
+-  pip install SpeechRecognition

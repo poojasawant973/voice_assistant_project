@@ -25,20 +25,19 @@ class Infow:
 
         time.sleep(3)  
 
-        try:
-            first_para = self.driver.find_element(By.XPATH, '//*[@id="mw-content-text"]/div[1]/p[1]')
-            paragraph_text = first_para.text
-            print("First Paragraph: ", paragraph_text)
+        # try:
+        #     first_para = self.driver.find_element(By.XPATH, '//*[@id="mw-content-text"]/div[1]/p[1]')
+        #     paragraph_text = first_para.text
+        #     print("First Paragraph: ", paragraph_text)
 
-            self.speak(paragraph_text)
+        #     self.speak(paragraph_text)
 
-        except Exception as e:
-            print('Error in finding the paragraph:', e)
+        # except Exception as e:
+        #     print('Error in finding the paragraph:', e)
 
-        time.sleep(60)  
+        # time.sleep(60)  
 
     def speak(self, text):
-        """Use pyttsx3 to speak the text."""
         self.engine.say(text)  
         self.engine.runAndWait() 
 
