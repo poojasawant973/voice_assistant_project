@@ -9,7 +9,6 @@ import requests
 import datetime
 from ss import key2
 
-# Initialize text-to-speech engine
 engine = p.init()
 rate = engine.getProperty('rate')
 engine.setProperty('rate', 150)
@@ -41,7 +40,6 @@ def des():
     description = json_data["weather"][0]["description"]
     return description
 
-# Greet the user
 today_date = datetime.datetime.now()
 speak("Hello, Good " + Wishme() + ", I'm your voice assistant.")
 speak("Today is " + today_date.strftime("%A, %d %B %Y"))
@@ -69,7 +67,6 @@ while True:
             speak("I encountered an error while processing your request.")
             continue
 
-    # Respond based on user input
     text = text.lower()
     if "information" in text:
         speak("You need information related to which topic?")
@@ -122,7 +119,7 @@ while True:
     elif "joke" in text or "jokes" in text:
         try:
             setup, punchline = joke()  
-            
+
             print(setup)
             speak(setup)
             print(punchline)

@@ -12,5 +12,3 @@ def des():
     description = json_data["weather"][0]["description"]
     return description
 
-print(temp())
-print(des())
